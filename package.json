@@ -1,0 +1,16 @@
+{
+  "name": "zooniverse-talk-activity",
+  "version": "0.1.0",
+  "description": "Recent Talk subject comments on the ooniverse",
+  "main": "index.html",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jim O'Donnell <jim@zooniverse.org>",
+  "license": "ISC"
+}
