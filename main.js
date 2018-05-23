@@ -14,7 +14,8 @@ function renderComment(comment) {
   img.alt = comment.body;
   var caption = document.createElement('p');
   caption.appendChild(document.createTextNode(comment.body));
-  var container = document.createElement('div');
+  var container = document.createElement('a');
+  container.href = 'https://www.zooniverse.org/projects/' + comment.project_slug + '/talk/subjects/' + comment.focus_id;
   container.className = 'talk-image';
   container.appendChild(img);
   container.appendChild(caption);
