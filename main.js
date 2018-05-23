@@ -9,12 +9,16 @@ function renderComment(comment) {
   });
   var image_location = image_locations[0];
   var image_url = image_location['image/jpeg'] || image_location['image/png'];
-  console.log(image_url);
   var img = document.createElement('img');
   img.src = image_url;
   img.alt = comment.body;
-  img.title = comment.body;
-  document.body.appendChild(img);
+  var caption = document.createElement('p');
+  caption.appendChild(document.createTextNode(comment.body));
+  var container = document.createElement('div');
+  container.className = 'talk-image';
+  container.appendChild(img);
+  container.appendChild(caption);
+  document.body.appendChild(container);
 }
 
 function loadSubjects(subject_ids) {
