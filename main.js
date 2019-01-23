@@ -8,7 +8,7 @@ function renderComment(comment) {
     return type === 'image/jpeg' || type === 'image/png';
   });
   var image_location = image_locations[0];
-  var image_url = image_location['image/jpeg'] || image_location['image/png'];
+  var image_url = image_location ? image_location['image/jpeg'] || image_location['image/png'] : '';
   var img = document.createElement('img');
   img.src = image_url;
   img.alt = comment.body;
