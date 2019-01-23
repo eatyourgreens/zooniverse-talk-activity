@@ -3,25 +3,48 @@
     <script src="./main.js"></script>
     <style>
       body {
+        display: grid;
+        grid-auto-rows: auto, minmax(10px, 40vh);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: .5em;
         background-color: #1c2733;
         color: #fff;
         font-family: sans-serif;
+        font-size: .9em;
+      }
+      h1 {
+        font-weight: 100;
+        grid-column: 1/5;
+        grid-row: 1;
+        height: auto;
       }
       .talk-image {
         display: inline-block;
         margin: .6vw;
         padding: .2vw;
+        max-height: 40vh;
         max-width: 20vw;
+        position: relative;
       }
-      a {
+      a p{
+        background: #5428bf;
         color: white;
         text-decoration: none;
-        opacity: 0.8;
+        opacity: 0.4;
+        position: absolute;
+        top: -20;
+        left: -10;
+        margin: 0;
+        overflow: hidden;
+        width: 70%;
+        padding: 5%;
+        
       }
-      a:hover, a:focus {
+      a:hover p, a:focus p{
         opacity: 1.0;
       }
       img {
+        max-height: 40vh;
         max-width: 20vw;
       }
     </style>
